@@ -1,7 +1,7 @@
 {
   "meta": {
     "name": "Luxe Hair Studio settings",
-    "version": "3.1",
+    "version": "3.2",
     "exportedAt": "2026-08-31T04:49:43.651Z"
   },
   "config": {
@@ -23,12 +23,59 @@
       "heroBase": "#161112",
       "heroInk": "#f7f1e7",
       "heroGold": "#c9b037",
-      "heroChampagne": "#f5e6d3"
+      "heroChampagne": "#f5e6d3",
+      "presets": [
+        {
+          "name": "Day Salon",
+          "overrides": {
+            "fontFamily": "Cormorant Garamond",
+            "temperature": 0,
+            "saturation": 0,
+            "contrast": 1.0
+          }
+        },
+        {
+          "name": "Evening Glamour",
+          "overrides": {
+            "fontFamily": "Playfair Display",
+            "temperature": 15,
+            "saturation": 10,
+            "contrast": 1.1
+          }
+        },
+        {
+          "name": "Sage Atelier",
+          "overrides": {
+            "fontFamily": "Fraunces",
+            "temperature": -8,
+            "saturation": -5,
+            "contrast": 1.05
+          }
+        },
+        {
+          "name": "Copper House",
+          "overrides": {
+            "fontFamily": "Cormorant Garamond",
+            "temperature": 20,
+            "saturation": 15,
+            "contrast": 1.0
+          }
+        },
+        {
+          "name": "Platinum",
+          "overrides": {
+            "fontFamily": "Playfair Display",
+            "temperature": -15,
+            "saturation": -10,
+            "contrast": 1.15
+          }
+        }
+      ]
     },
     "concierge": {
       "enabled": true,
       "name": "Vivienne",
-      "greeting": "Good day — I'm Vivienne, your salon concierge. Services, prices, chairs, gift cards: how may I help?",
+      "greeting": "Good day \u2014 I'm Vivienne, your salon concierge. Services, prices, chairs, gift cards: how may I help?",
       "chime": true,
       "openDelay": 3800,
       "minDelay": 3,
@@ -41,22 +88,22 @@
         {
           "id": "k-prices",
           "match": "price|pricing|cost|how much",
-          "en": "Our menu runs in three tiers — Junior, Senior, Master. A Signature Cut & Finish is £85 / £110 / £140; full balayage from £180 / £240 / £310; bond repair £55–£85. Want me to open the full menu or book a chair?"
+          "en": "Our menu runs in three tiers \u2014 Junior, Senior, Master. A Signature Cut & Finish is \u00a385 / \u00a3110 / \u00a3140; full balayage from \u00a3180 / \u00a3240 / \u00a3310; bond repair \u00a355\u2013\u00a385. Want me to open the full menu or book a chair?"
         },
         {
           "id": "k-hours",
           "match": "hour|open|closing|when",
-          "en": "We rest on Mondays. Tuesday–Friday 09:00–19:00, Saturday 08:00–18:00, Sunday 10:00–16:00. The kettle is on from 08:45."
+          "en": "We rest on Mondays. Tuesday\u2013Friday 09:00\u201319:00, Saturday 08:00\u201318:00, Sunday 10:00\u201316:00. The kettle is on from 08:45."
         },
         {
           "id": "k-book",
           "match": "book|appointment|reserve|chair",
-          "en": "Consider it half done — I'll take you straight to the booking chair. Four small steps and the slot is yours."
+          "en": "Consider it half done \u2014 I'll take you straight to the booking chair. Four small steps and the slot is yours."
         },
         {
           "id": "k-gift",
           "match": "gift|voucher|card",
-          "en": "Gift cards start at £50 and arrive by email with your own note attached — transformations make better gifts than candles."
+          "en": "Gift cards start at \u00a350 and arrive by email with your own note attached \u2014 transformations make better gifts than candles."
         }
       ]
     },
@@ -65,85 +112,79 @@
         "uid": "sl-services",
         "enabled": true,
         "kind": "builtin",
-        "id": "services",
-        "settings": {
-          "bg": "",
-          "spacing": "default",
-          "animation": "fade",
-          "css": ""
-        }
+        "id": "services"
       },
       {
-        "uid": "sl-gallery",
+        "uid": "sl-transformations",
         "enabled": true,
         "kind": "builtin",
-        "id": "transformations",
-        "settings": {
-          "bg": "",
-          "spacing": "default",
-          "animation": "fade",
-          "css": ""
-        }
-      },
-      {
-        "uid": "sl-mirror",
-        "enabled": true,
-        "kind": "builtin",
-        "id": "mirror",
-        "settings": {
-          "bg": "",
-          "spacing": "default",
-          "animation": "fade",
-          "css": ""
-        }
+        "id": "transformations"
       },
       {
         "uid": "sl-stylists",
         "enabled": true,
         "kind": "builtin",
-        "id": "stylists",
-        "settings": {
-          "bg": "",
-          "spacing": "default",
-          "animation": "fade",
-          "css": ""
-        }
+        "id": "stylists"
       },
       {
-        "uid": "sl-consult",
+        "uid": "sl-consultation",
         "enabled": true,
         "kind": "builtin",
-        "id": "consultation",
-        "settings": {
-          "bg": "",
-          "spacing": "default",
-          "animation": "fade",
-          "css": ""
-        }
+        "id": "consultation"
+      },
+      {
+        "uid": "sl-mirror",
+        "enabled": true,
+        "kind": "builtin",
+        "id": "mirror"
       },
       {
         "uid": "sl-booking",
         "enabled": true,
         "kind": "builtin",
-        "id": "booking",
-        "settings": {
-          "bg": "",
-          "spacing": "default",
-          "animation": "fade",
-          "css": ""
-        }
+        "id": "booking"
       },
       {
         "uid": "sl-experience",
         "enabled": true,
         "kind": "builtin",
-        "id": "experience",
-        "settings": {
-          "bg": "",
-          "spacing": "default",
-          "animation": "fade",
-          "css": ""
-        }
+        "id": "experience"
+      },
+      {
+        "uid": "sl-amenities",
+        "enabled": true,
+        "kind": "builtin",
+        "id": "amenities"
+      },
+      {
+        "uid": "sl-marquee",
+        "enabled": true,
+        "kind": "builtin",
+        "id": "marquee"
+      },
+      {
+        "uid": "sl-stats",
+        "enabled": true,
+        "kind": "builtin",
+        "id": "stats"
+      },
+      {
+        "uid": "sl-quiz",
+        "enabled": true,
+        "kind": "builtin",
+        "id": "quiz"
+      },
+      {
+        "uid": "sl-tiers",
+        "enabled": true,
+        "kind": "builtin",
+        "id": "tiers"
+      },
+      {
+        "uid": "sl-booking-addons",
+        "enabled": true,
+        "kind": "builtin",
+        "id": "booking-addons"
       }
     ],
     "library": [],
@@ -151,64 +192,66 @@
       "hero": {
         "stages": [
           {
-            "kicker": "01 · The Natural",
+            "kicker": "01 \u00b7 The Natural",
             "line1": "Every masterpiece",
             "line2": "begins au naturel.",
-            "sub": "Real hair, honest light, zero pretence. Your story starts exactly as you are — and it's already a good story.",
+            "sub": "Real hair in honest light \u2014 no filters, no pretense. This is where we begin.",
             "image": "__LUXE_IMAGES__/img-0-_result.png",
             "alt": "Model with natural, unstyled hair in soft daylight",
             "accent": "#c9b037",
             "overlay": 52
           },
           {
-            "kicker": "02 · The Colour",
+            "kicker": "02 \u00b7 The Colour",
             "line1": "Colour, painted",
             "line2": "like liquid light.",
-            "sub": "Hand-drawn balayage in warm copper and rose — dimension placed exactly where the sun would find it.",
-            "image": "__LUXE_IMAGES__/img-1-_result.png",
-            "alt": "Glossy copper and rose-gold balayage catching salon light",
+            "sub": "Hand-drawn balayage that moves with you, breathes with you, lives with you.",
+            "image": "__LUXE_IMAGES__/img-7-_result.png",
+            "alt": "Balayage colour transformation in warm studio light",
             "accent": "#e0b2b2",
-            "overlay": 56
+            "overlay": 48
           },
           {
-            "kicker": "03 · The Reveal",
-            "line1": "And then —",
+            "kicker": "03 \u00b7 The Reveal",
+            "line1": "And then \u2014",
             "line2": "the reveal.",
-            "sub": "Champagne waves with a memory of their own. You didn't become someone new; you arrived as yourself, polished.",
-            "image": "__LUXE_IMAGES__/img-2-_result.png",
-            "alt": "Model with luminous champagne waves, the final transformed look",
+            "sub": "Champagne waves catching afternoon light. The moment you fall in love again.",
+            "image": "__LUXE_IMAGES__/img-1-_result.png",
+            "alt": "Finished styled hair with champagne waves",
             "accent": "#f5e6d3",
-            "overlay": 50
+            "overlay": 45
           },
           {
-            "kicker": "04 · The Atelier",
+            "kicker": "04 \u00b7 The Atelier",
             "line1": "For the days",
             "line2": "that matter most.",
-            "sub": "Bridal artistry, trials and timelines — calm hands for the loudest morning of your life.",
-            "image": "__LUXE_IMAGES__/img-3-_result.png",
-            "alt": "Elegant bridal low bun with baby's breath and gold pins",
+            "sub": "Bridal artistry for moments that deserve to be remembered forever.",
+            "image": "__LUXE_IMAGES__/img-6-_result.png",
+            "alt": "Bridal updo with delicate accessories",
             "accent": "#a8b5a0",
-            "overlay": 56
+            "overlay": 50
           }
         ],
-        "cta": "Book Your Transformation",
-        "cta2": "Wander the menu"
+        "cta": "Reserve your chair",
+        "cta2": "Explore services"
       },
       "salon": {
         "name": "Luxe Hair Studio",
+        "word": "LUXE",
+        "sub": "Hair Studio",
         "address": "12 Rosewater Lane",
         "city": "Mayfair, London W1K",
         "phone": "+44 20 7946 0958",
         "email": "hello@luxehairstudio.co.uk",
-        "tagline": "Where soft geometry meets warm luxury.",
-        "img": "__LUXE_IMAGES__/img-4-_result.png"
+        "copyright": "Crafted strand by strand \u2014 a flagship salon experience."
       },
       "footer": {
-        "word": "LUXE",
-        "sub": "Hair Studio",
-        "copyright": "Crafted strand by strand — a flagship salon experience.",
-        "newsHeading": "Hair wisdom, weekly",
-        "newsText": "One elegant email a week — care rituals, trend forecasts, first dibs on cancelled chairs."
+        "tagline": "Quiet luxury, spoken in scissors and light.",
+        "address": "12 Rosewater Lane, Mayfair, London W1K",
+        "phone": "+44 20 7946 0958",
+        "email": "hello@luxehairstudio.co.uk",
+        "hours": "Tue\u2013Sat: 9am\u20137pm | Sun\u2013Mon: By appointment",
+        "copyright": "Crafted strand by strand \u2014 a flagship salon experience."
       },
       "services": [
         {
@@ -223,7 +266,7 @@
             },
             {
               "name": "Restyle & Reinvent",
-              "desc": "A full silhouette change — bring references, leave transformed.",
+              "desc": "A full silhouette change \u2014 bring references, leave transformed.",
               "dur": 105,
               "price": 145
             },
@@ -337,7 +380,7 @@
             },
             {
               "name": "Cut & Hot-Towel Shave",
-              "desc": "The full ritual — straight razor, warm lather, cold finish.",
+              "desc": "The full ritual \u2014 straight razor, warm lather, cold finish.",
               "dur": 75,
               "price": 90
             }
@@ -348,34 +391,34 @@
         {
           "id": "amara",
           "name": "Amara Okafor",
-          "title": "Master Stylist · Texture Lead",
+          "title": "Master Stylist \u00b7 Texture",
           "specialty": "Textured & coily hair",
-          "personality": "Warm, attentive, quietly brilliant",
+          "personality": "Warm attentive quietly brilliant",
           "quote": "Your curls have a memory. I just help them remember.",
-          "img": "__LUXE_IMAGES__/img-5-_result.png"
+          "img": "__LUXE_IMAGES__/img-3-_result.png"
         },
         {
           "id": "sofia",
           "name": "Sofia Reyes",
           "title": "Colour Director",
           "specialty": "Balayage & colour correction",
-          "personality": "Bold, creative, endlessly curious",
+          "personality": "Bold creative endlessly curious",
           "quote": "Colour is light you get to keep.",
-          "img": "__LUXE_IMAGES__/img-6-_result.png"
+          "img": "__LUXE_IMAGES__/img-4-_result.png"
         },
         {
           "id": "elena",
           "name": "Elena Marchetti",
-          "title": "Founder · Editorial Director",
+          "title": "Founder \u00b7 Editorial",
           "specialty": "Editorial styling & bridal",
-          "personality": "Precise, calming, quietly opinionated",
+          "personality": "Precise calming quietly opinionated",
           "quote": "A haircut should argue with no one and flatter everyone.",
-          "img": "__LUXE_IMAGES__/img-7-_result.png"
+          "img": "__LUXE_IMAGES__/img-5-_result.png"
         }
       ],
       "testimonials": [
         {
-          "quote": "I've chased this exact shade for six years and three salons. Sofia mixed it on the first try — then taught me how to keep it.",
+          "quote": "I've chased this exact shade for six years and three salons. Sofia mixed it on the first try \u2014 then taught me how to keep it.",
           "name": "Charlotte H.",
           "service": "Full Balayage",
           "stars": 5
@@ -387,7 +430,7 @@
           "stars": 5
         },
         {
-          "quote": "Elena ran the morning like a conductor — calm, precise, and the chignon outlasted a thunderstorm.",
+          "quote": "Elena ran the morning like a conductor \u2014 calm, precise, and the chignon outlasted a thunderstorm.",
           "name": "Megan & Tom",
           "service": "Bridal Suite",
           "stars": 5
@@ -396,174 +439,112 @@
       "products": [
         {
           "name": "Silk No. 9 Shampoo",
-          "kind": "Daily care · 250ml",
-          "desc": "Sulfate-free cleanse with rice protein and a whisper of jasmine.",
-          "price": 34,
-          "tags": [
-            "All hair",
-            "Colour-safe"
-          ],
-          "hue": [
-            "#e9d9c8",
-            "#d4a5a5"
-          ]
+          "price": "\u00a334",
+          "description": "A weightless cleanse infused with hydrolyzed silk proteins. Leaves hair luminous, never stripped."
         },
         {
-          "name": "Cloud Rinse",
-          "kind": "Conditioner · 250ml",
-          "desc": "Weightless slip and marshmallow-root softness for mid-lengths to ends.",
-          "price": 36,
-          "tags": [
-            "Fine hair"
-          ],
-          "hue": [
-            "#f0e6d6",
-            "#c9b037"
-          ]
+          "name": "Cloud Rinse Conditioner",
+          "price": "\u00a336",
+          "description": "Whipped hydration that melts into each strand. Our signature jasmine-amber scent lingers delicately."
         },
         {
           "name": "Liquid Shine Serum",
-          "kind": "Finishing · 50ml",
-          "desc": "Glass-hair gloss with heat protection to 230°. Two drops, no more.",
-          "price": 42,
-          "tags": [
-            "Gloss",
-            "Heat guard"
-          ],
-          "hue": [
-            "#e4cf9e",
-            "#b98f4a"
-          ]
-        },
-        {
-          "name": "Night Repair Masque",
-          "kind": "Treatment · 200ml",
-          "desc": "Bond-rebuilding overnight cure for colour-tired, heat-weary lengths.",
-          "price": 48,
-          "tags": [
-            "Damaged",
-            "Colour-treated"
-          ],
-          "hue": [
-            "#d9c7b8",
-            "#8b7d74"
-          ]
+          "price": "\u00a342",
+          "description": "Three drops transform frizz into reflected light. The secret behind our signature champagne waves."
         }
       ],
       "packages": [
         {
           "name": "The Full Makeover",
-          "tag": "Most booked",
-          "desc": "Restyle, balayage, bond repair and a gloss finish — one long, luxurious afternoon with champagne.",
-          "dur": "4h 30m",
-          "price": 380,
-          "shape": "rounded-[2.4rem_2.4rem_2.4rem_0.6rem]"
+          "tagline": "Most booked",
+          "description": "Restyle, balayage, bond repair, gloss, champagne",
+          "duration": "4h 30m",
+          "price": "\u00a3380"
         },
         {
           "name": "Bridal Suite",
-          "tag": "For the big day",
-          "desc": "Trial, wedding-day hair and makeup, bridesmaid discount and a calm morning with your own stylist.",
-          "dur": "Trial + day-of",
-          "price": 495,
-          "shape": "rounded-[2.4rem_2.4rem_0.6rem_2.4rem]"
+          "tagline": "For the big day",
+          "description": "Trial, wedding-day hair+makeup, bridesmaid discount",
+          "duration": "Trial + day-of",
+          "price": "\u00a3495"
         },
         {
           "name": "Colour Reset",
-          "tag": "The rescue",
-          "desc": "Correction consultation, strand tests, the correction itself and two follow-up gloss visits.",
-          "dur": "Two visits",
-          "price": 460,
-          "shape": "rounded-[0.6rem_2.4rem_2.4rem_2.4rem]"
+          "tagline": "The rescue",
+          "description": "Correction consultation, strand tests, correction, 2 gloss visits",
+          "duration": "Two visits",
+          "price": "\u00a3460"
         }
       ],
       "gallery": [
         {
-          "id": 1,
           "title": "Rosewater Balayage",
-          "kind": "colour",
+          "type": "colour",
           "stylist": "Sofia",
-          "quote": "I caught my reflection in a shop window and didn't recognise her — in the best way.",
-          "image": "__LUXE_IMAGES__/img-1-_result.png"
+          "quote": "Sofia understood exactly what 'lived-in luxury' meant for my hair.",
+          "img": "__LUXE_IMAGES__/img-7-_result.png"
         },
         {
-          "id": 2,
-          "title": "The Bridal Chignon",
-          "kind": "bridal",
+          "title": "Bridal Chignon",
+          "type": "bridal",
           "stylist": "Elena",
-          "quote": "It survived rain, tears and an hour of dancing. My photographer cried too.",
-          "image": "__LUXE_IMAGES__/img-3-_result.png"
+          "quote": "Elena created something timeless. I felt like myself, only elevated.",
+          "img": "__LUXE_IMAGES__/img-6-_result.png"
         },
         {
-          "id": 3,
           "title": "Champagne Reveal",
-          "kind": "colour",
+          "type": "colour",
           "stylist": "Sofia",
-          "quote": "Strangers ask where I holiday. It's a haircut, not a holiday.",
-          "image": "__LUXE_IMAGES__/img-2-_result.png"
+          "quote": "The way the light catches these tones \u2014 pure artistry.",
+          "img": "__LUXE_IMAGES__/img-1-_result.png"
         },
         {
-          "id": 4,
-          "title": "The Natural Study",
-          "kind": "cut",
+          "title": "Natural Study",
+          "type": "cut",
           "stylist": "Amara",
-          "quote": "Amara listened for twenty minutes before she lifted a single section.",
-          "image": "__LUXE_IMAGES__/img-0-_result.png"
-        },
-        {
-          "id": 5,
-          "title": "Atelier Morning",
-          "kind": "treatment",
-          "stylist": "Amara",
-          "quote": "The scalp ritual rearranged my entire week. Book the quiet chair.",
-          "image": "__LUXE_IMAGES__/img-4-_result.png"
-        },
-        {
-          "id": 6,
-          "title": "Copper Dimension",
-          "kind": "colour",
-          "stylist": "Sofia",
-          "quote": "Caramel at the roots, honey at the ends. I've never had so many compliments.",
-          "image": "__LUXE_IMAGES__/img-1-_result.png"
+          "quote": "Finally, someone who understands textured hair without trying to tame it.",
+          "img": "__LUXE_IMAGES__/img-0-_result.png"
         }
       ],
       "amenities": [
         {
-          "icon": "coffee",
-          "title": "Coffee & tea cart",
-          "desc": "Single-origin espresso, jasmine pearls, oat anything."
+          "name": "Coffee & tea cart",
+          "description": "Artisan blends served in bone china. Earl Grey, single-origin Ethiopian, or our house chamomile-lavender infusion."
         },
         {
-          "icon": "flower",
-          "title": "Fresh flowers, weekly",
-          "desc": "The peonies arrive every Tuesday. It's a whole event."
+          "name": "Fresh flowers weekly",
+          "description": "Seasonal arrangements from Columbia Road Market. Peonies in June, dried pampas in winter, always fragrant."
         },
         {
-          "icon": "drop",
-          "title": "Head massage rituals",
-          "desc": "Warm oil and ten minutes that erase the week."
+          "name": "Head massage rituals",
+          "description": "Five minutes of warm oil and deliberate pressure. Included with every colour service, requested by name for cuts."
         },
         {
-          "icon": "wifi",
-          "title": "Fast, quiet Wi-Fi",
-          "desc": "For the ones who must. We won't tell."
-        },
-        {
-          "icon": "car",
-          "title": "Valet nearby",
-          "desc": "Park on Rosewater Lane or let the valet handle it."
-        },
-        {
-          "icon": "gem",
-          "title": "Quiet alcove chairs",
-          "desc": "Two chairs behind the arch, for introverts and naps."
+          "name": "Quiet alcove chairs",
+          "description": "For the client who prefers silence. Linen upholstery, soft lighting, no mirrors \u2014 just stillness."
         }
       ],
       "scents": [
-        "Lavender",
-        "Jasmine",
-        "Warm vanilla",
-        "Bergamot",
-        "Fresh linen"
+        {
+          "name": "Lavender",
+          "effect": "Calming"
+        },
+        {
+          "name": "Jasmine",
+          "effect": "Uplifting"
+        },
+        {
+          "name": "Warm vanilla",
+          "effect": "Comforting"
+        },
+        {
+          "name": "Bergamot",
+          "effect": "Energizing"
+        },
+        {
+          "name": "Fresh linen",
+          "effect": "Clean"
+        }
       ],
       "marquee": [
         "Precision Cuts",
@@ -576,174 +557,86 @@
       ],
       "stats": [
         {
-          "end": 2400,
+          "end": 12,
           "suffix": "+",
-          "label": "Happy clients"
-        },
-        {
-          "end": 14,
           "label": "Years of craft"
         },
         {
-          "end": 12,
-          "label": "Expert stylists"
+          "end": 8,
+          "suffix": "k+",
+          "label": "Happy clients"
         },
         {
-          "end": 38,
-          "suffix": "k",
-          "label": "Colours hand-mixed"
+          "end": 15,
+          "label": "Awards won"
+        },
+        {
+          "end": 100,
+          "suffix": "%",
+          "label": "Dedication"
         }
       ],
       "bookingAddons": [
         {
-          "name": "Deep conditioning",
+          "name": "Express scalp treatment",
           "price": 25
         },
         {
-          "name": "Scalp massage",
-          "price": 18
+          "name": "Bond repair booster",
+          "price": 35
         },
         {
-          "name": "Brow shaping",
-          "price": 22
+          "name": "Take-home styling kit",
+          "price": 45
         },
         {
-          "name": "Gloss finish",
-          "price": 30
+          "name": "Champagne upgrade",
+          "price": 55
         }
       ],
       "quiz": [
         {
-          "q": "Chatty, or blissfully quiet in the chair?",
+          "q": "Your natural texture?",
           "opts": [
             {
-              "label": "Love a good gossip",
+              "label": "Fine",
               "w": {
                 "amara": 1,
-                "sofia": 3,
-                "elena": 1
-              }
-            },
-            {
-              "label": "Quiet, please",
-              "w": {
-                "amara": 2,
-                "sofia": 0,
-                "elena": 3
-              }
-            }
-          ]
-        },
-        {
-          "q": "Trend-forward or timeless?",
-          "opts": [
-            {
-              "label": "Runway, darling",
-              "w": {
-                "amara": 0,
-                "sofia": 3,
-                "elena": 2
-              }
-            },
-            {
-              "label": "Timeless",
-              "w": {
-                "amara": 3,
-                "sofia": 1,
-                "elena": 2
-              }
-            }
-          ]
-        },
-        {
-          "q": "Gentle nudge or decisive takeover?",
-          "opts": [
-            {
-              "label": "Take the wheel",
-              "w": {
-                "amara": 1,
-                "sofia": 3,
-                "elena": 1
-              }
-            },
-            {
-              "label": "Guide me softly",
-              "w": {
-                "amara": 3,
-                "sofia": 0,
-                "elena": 2
-              }
-            }
-          ]
-        },
-        {
-          "q": "Your texture?",
-          "opts": [
-            {
-              "label": "Curls & coils",
-              "w": {
-                "amara": 4,
-                "sofia": 1,
-                "elena": 0
-              }
-            },
-            {
-              "label": "Straight to wavy",
-              "w": {
-                "amara": 0,
                 "sofia": 2,
                 "elena": 3
               }
-            }
-          ]
-        },
-        {
-          "q": "Colour ambition?",
-          "opts": [
-            {
-              "label": "Big, bold change",
-              "w": {
-                "amara": 0,
-                "sofia": 4,
-                "elena": 0
-              }
             },
             {
-              "label": "Subtle dimension",
-              "w": {
-                "amara": 2,
-                "sofia": 1,
-                "elena": 3
-              }
-            }
-          ]
-        },
-        {
-          "q": "Maintenance appetite?",
-          "opts": [
-            {
-              "label": "Every six weeks",
+              "label": "Medium",
               "w": {
                 "amara": 2,
                 "sofia": 3,
-                "elena": 1
+                "elena": 2
               }
             },
             {
-              "label": "Grow it out gracefully",
+              "label": "Coarse-Coily",
               "w": {
-                "amara": 3,
-                "sofia": 0,
-                "elena": 3
+                "amara": 4,
+                "sofia": 1,
+                "elena": 0
               }
             }
           ]
         },
         {
-          "q": "Your ideal outcome?",
+          "q": "Your styling goal?",
           "opts": [
             {
-              "label": "Turn heads",
+              "label": "Low maintenance",
+              "w": {
+                "amara": 3,
+                "sofia": 1,
+                "elena": 2
+              }
+            },
+            {
+              "label": "Bold change",
               "w": {
                 "amara": 0,
                 "sofia": 4,
@@ -751,11 +644,11 @@
               }
             },
             {
-              "label": "Feel like myself, refined",
+              "label": "Special event",
               "w": {
-                "amara": 4,
-                "sofia": 0,
-                "elena": 3
+                "amara": 1,
+                "sofia": 2,
+                "elena": 4
               }
             }
           ]
@@ -765,7 +658,7 @@
         {
           "id": "Hair type",
           "label": "Your hair, in its natural state?",
-          "sub": "No judgement — we love all of it.",
+          "sub": "No judgement \u2014 we love all of it.",
           "opts": [
             "Fine & straight",
             "Thick & wavy",
@@ -820,44 +713,97 @@
         "services": {
           "title": "Craft, priced",
           "italic": "with honesty.",
-          "desc": "Three tiers — Junior, Senior, Master — one uncompromising ritual."
+          "desc": "Three tiers \u2014 Junior, Senior, Master \u2014 one uncompromising ritual."
         },
         "transformations": {
           "title": "Drag the parting,",
           "italic": "meet the after.",
-          "desc": "Real clients, real chairs, no retouching. Slide each golden parting back to the before."
-        },
-        "mirror": {
-          "title": "Step up to",
-          "italic": "the mirror.",
-          "desc": "Choose a muse, paint a colour, and see the look before it's ever cut."
+          "desc": "Real clients, real chairs, no retouching."
         },
         "stylists": {
           "title": "Hands you can",
           "italic": "trust blindly.",
-          "desc": "Three philosophies, one standard. Hover to meet them — or let the matchmaker decide."
+          "desc": "Three philosophies, one standard."
         },
         "consultation": {
           "title": "Your hair, read",
           "italic": "like a novel.",
-          "desc": "Five questions and three complete looks — services, stylist, time and honest pricing."
+          "desc": "Five questions, three complete looks."
+        },
+        "mirror": {
+          "title": "Step up to",
+          "italic": "the mirror.",
+          "desc": "Pick a muse, pour a shade \u2014 on-device, private, instant."
         },
         "booking": {
           "title": "Your appointment,",
           "italic": "four small steps.",
-          "desc": "Live availability, honest durations, and a confirmation code you'll actually remember."
+          "desc": "Live availability, honest durations."
         },
         "experience": {
           "title": "You'll remember",
           "italic": "how it felt.",
-          "desc": "We design for all five senses — linen-warm light, good scissors, and our signature scent."
+          "desc": "Linen-warm light, good scissors, our signature scent."
         }
       },
-      "labels": {},
+      "labels": {
+        "nav.services": "Services",
+        "nav.transformations": "Transformations",
+        "nav.stylists": "Our Hands",
+        "nav.booking": "Reserve",
+        "nav.shop": "Apothecary",
+        "nav.contact": "Find Us",
+        "hero.kicker": "Welcome to",
+        "hero.title": "LUXE Hair Studio",
+        "hero.subtitle": "Quiet luxury, spoken in scissors and light.",
+        "eyebrow.before": "Before",
+        "eyebrow.after": "After",
+        "eyebrow.drag": "Drag to reveal",
+        "packages.explore": "Explore packages",
+        "packages.mostBooked": "Most booked",
+        "apothecary.shop": "Shop the ritual",
+        "apothecary.add": "Add to basket",
+        "booking.select": "Select your moment",
+        "booking.confirm": "Confirm reservation",
+        "booking.step1": "Service",
+        "booking.step2": "Stylist",
+        "booking.step3": "Date & Time",
+        "booking.step4": "Details",
+        "gallery.view": "View gallery",
+        "gallery.all": "All work",
+        "mirror.try": "Try your shade",
+        "mirror.muse": "Choose your muse",
+        "mirror.shade": "Pour a colour",
+        "consult.begin": "Begin consultation",
+        "consult.complete": "Your matches",
+        "dock.home": "Home",
+        "dock.book": "Book",
+        "dock.mirror": "Mirror",
+        "dock.shop": "Shop",
+        "concierge.greeting": "Good evening",
+        "concierge.help": "How may we care for you?",
+        "footer.address": "12 Rosewater Lane, Mayfair, London W1K",
+        "footer.phone": "+44 20 7946 0958",
+        "footer.email": "hello@luxehairstudio.co.uk",
+        "footer.hours": "Tue\u2013Sat: 9am\u20137pm | Sun\u2013Mon: By appointment",
+        "console.title": "Luxe Hair Studio \u00b7 Backoffice"
+      },
       "tiers": [
-        "Junior",
-        "Senior",
-        "Master"
+        {
+          "name": "Junior",
+          "cut": 85,
+          "colour": 180
+        },
+        {
+          "name": "Senior",
+          "cut": 110,
+          "colour": 240
+        },
+        {
+          "name": "Master",
+          "cut": 140,
+          "colour": 310
+        }
       ],
       "bookingSteps": [
         "Service",
@@ -880,24 +826,21 @@
       }
     },
     "mirror": {
-      "models": [
+      "muses": [
         {
-          "id": "muse-natural",
-          "label": "Muse · Natural",
+          "name": "Muse \u00b7 Natural",
           "image": "__LUXE_IMAGES__/img-0-_result.png",
-          "hair": "#6b4f3a"
+          "accent": "#6b4f3a"
         },
         {
-          "id": "muse-coily",
-          "label": "Amara · Coily",
-          "image": "__LUXE_IMAGES__/img-5-_result.png",
-          "hair": "#3a2a22"
+          "name": "Muse \u00b7 Waves",
+          "image": "__LUXE_IMAGES__/img-1-_result.png",
+          "accent": "#c98d6b"
         },
         {
-          "id": "muse-waves",
-          "label": "Sofia · Waves",
-          "image": "__LUXE_IMAGES__/img-6-_result.png",
-          "hair": "#5c4232"
+          "name": "Muse \u00b7 Colour",
+          "image": "__LUXE_IMAGES__/img-7-_result.png",
+          "accent": "#b47462"
         }
       ],
       "shades": [
@@ -911,46 +854,72 @@
         {
           "id": "champagne",
           "label": "Champagne",
-          "h": 42,
+          "h": 40,
           "s": 52,
           "l": 66
         },
         {
           "id": "rosewater",
           "label": "Rosewater",
-          "h": 12,
-          "s": 48,
+          "h": 8,
+          "s": 45,
           "l": 62
         },
         {
-          "id": "copper",
+          "id": "warm-copper",
           "label": "Warm Copper",
-          "h": 22,
-          "s": 68,
+          "h": 18,
+          "s": 62,
           "l": 48
         },
         {
-          "id": "glacier",
+          "id": "glacier-blonde",
           "label": "Glacier Blonde",
           "h": 48,
-          "s": 30,
+          "s": 24,
           "l": 78
         },
         {
-          "id": "espresso",
+          "id": "espresso-gloss",
           "label": "Espresso Gloss",
-          "h": 24,
-          "s": 42,
+          "h": 22,
+          "s": 30,
           "l": 22
+        },
+        {
+          "id": "cool-platinum",
+          "label": "Cool Platinum",
+          "h": 220,
+          "s": 10,
+          "l": 82
         }
       ],
-      "tolerance": 38,
-      "protectSkin": true,
-      "warmth": 40,
-      "shine": 45,
-      "camera": true
+      "engine": {
+        "tolerance": 38,
+        "protectSkin": true,
+        "warmth": 40,
+        "shine": 45
+      }
     },
     "translations": {},
     "autoTranslate": true
+  },
+  "system": {
+    "globalReset": true,
+    "sectionResets": {
+      "salonIdentity": true,
+      "headings": true,
+      "heroStages": true,
+      "services": true,
+      "stylists": true,
+      "packages": true,
+      "gallery": true,
+      "testimonials": true,
+      "products": true,
+      "uiTextLabels": true,
+      "images": true,
+      "amenities": true,
+      "extras": true
+    }
   }
 }
