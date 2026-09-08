@@ -14,10 +14,9 @@ if (!defined('ABSPATH')) {
 require_once get_template_directory() . '/inc/importer.php';
 
 /**
- * Enqueue theme scripts and styles
- * Publish config to frontend as window.__LUXE_CONFIG__
+ * Get merged configuration from database and defaults
  */
-function luxe_enqueue_scripts() {
+function luxe_merged_config() {
     // Get configuration from database
     $config = Luxe_Config_Importer::get_config();
     
@@ -26,54 +25,13 @@ function luxe_enqueue_scripts() {
         $defaults_path = get_template_directory() . '/inc/defaults.json';
         if (file_exists($defaults_path)) {
             $defaults_content = file_get_contents($defaults_path);
-            $config = json_decode($defaults_content, true);
+            $defaults = json_decode($defaults_content, true);
+            $config = isset($defaults['config']) ? $defaults['config'] : $defaults;
         }
     }
     
-    // Enqueue main stylesheet
-    wp_enqueue_style(
-        'luxe-style',
-        get_stylesheet_uri(),
-        array(),
-        wp_get_theme()->get('Version')
-    );
-    
-    // Enqueue Google Fonts (Cormorant Garamond, Playfair Display, Fraunces)
-    wp_enqueue_style(
-        'luxe-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Fraunces:ital,wght@0,400;0,500;1,400&display=swap',
-        array(),
-        null
-    );
-    
-    // Enqueue main JavaScript
-    wp_enqueue_script(
-        'luxe-app',
-        get_template_directory_uri() . '/assets/js/app.js',
-        array('jquery'),
-        wp_get_theme()->get('Version'),
-        true
-    );
-    
-    // Localize script with configuration - THIS IS THE BRIDGE
-    wp_localize_script('luxe-app', '__LUXE_CONFIG__', array(
-        'config' => $config,
-        'ajaxUrl' => admin_url('admin-ajax.php'),
-        'themeUrl' => get_template_directory_uri(),
-        'siteUrl' => get_site_url(),
-        'nonce' => wp_create_nonce('luxe_frontend_nonce')
-    ));
-    
-    // Enqueue additional assets if needed
-    wp_enqueue_script(
-        'luxe-mirror',
-        get_template_directory_uri() . '/assets/js/mirror.js',
-        array('jquery', 'luxe-app'),
-        wp_get_theme()->get('Version'),
-        true
-    );
+    return $config;
 }
-add_action('wp_enqueue_scripts', 'luxe_enqueue_scripts');
 
 /**
  * Add theme support features

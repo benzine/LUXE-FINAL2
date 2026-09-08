@@ -55,6 +55,9 @@ function luxe_enqueue_app() {
 	
 	/* Inject the FULL merged configuration as inline script so React reads it immediately.
 	   This ensures window.__LUXE_CONFIG__ is available before any module loads. */
+	if ( ! function_exists( 'luxe_merged_config' ) ) {
+		require_once get_template_directory() . '/inc/functions-bridge.php';
+	}
 	$full_config = luxe_merged_config();
 	$config_json = wp_json_encode( $full_config, JSON_UNESCAPED_SLASHES );
 	wp_add_inline_script( 'luxe-app', 'window.__LUXE_CONFIG__ = ' . $config_json . ';', 'before' );
