@@ -52,6 +52,12 @@ function luxe_enqueue_app() {
 			'nonce'   => wp_create_nonce( 'wp_rest' ),
 		)
 	);
+	
+	/* Inject the FULL merged configuration as inline script so React reads it immediately.
+	   This ensures window.__LUXE_CONFIG__ is available before any module loads. */
+	$full_config = luxe_merged_config();
+	$config_json = wp_json_encode( $full_config, JSON_UNESCAPED_SLASHES );
+	wp_add_inline_script( 'luxe-app', 'window.__LUXE_CONFIG__ = ' . $config_json . ';', 'before' );
 }
 add_action( 'wp_enqueue_scripts', 'luxe_enqueue_app' );
 
