@@ -14,26 +14,6 @@ if (!defined('ABSPATH')) {
 require_once get_template_directory() . '/inc/importer.php';
 
 /**
- * Get merged configuration from database and defaults
- */
-function luxe_merged_config() {
-    // Get configuration from database
-    $config = Luxe_Config_Importer::get_config();
-    
-    // Fallback to defaults.json if no config imported yet
-    if (empty($config)) {
-        $defaults_path = get_template_directory() . '/inc/defaults.json';
-        if (file_exists($defaults_path)) {
-            $defaults_content = file_get_contents($defaults_path);
-            $defaults = json_decode($defaults_content, true);
-            $config = isset($defaults['config']) ? $defaults['config'] : $defaults;
-        }
-    }
-    
-    return $config;
-}
-
-/**
  * Add theme support features
  */
 function luxe_setup() {

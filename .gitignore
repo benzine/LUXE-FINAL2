@@ -1,70 +1,37 @@
-```
-# WordPress/WP Engine specific
-wp-content/cache/
-*.log
-*.tmp
-
-# Dependencies
-node_modules/
+```php
+# Dependency directories
 vendor/
+node_modules/
+
+# Build artifacts
+dist/
+build/
+*.min.css
+*.min.js
+*.css.map
+*.js.map
+
+# Logs
+*.log
+logs/
 
 # Environment
 .env
 .env.local
 .env.*
 
-# Editor/IDE
+# Editor/IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
+*.tmp
 
-# OS
+# OS generated files
 .DS_Store
 Thumbs.db
 
-# Build/compiled
-*.o
-*.obj
-*.exe
-*.dll
-*.so
-*.a
-*.out
-
-# Python (if applicable)
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-.coverage
-htmlcov/
-.coverage.*
-.pytest_cache/
-.mypy_cache/
-
-# Coverage
-coverage/
-
-# Compressed
-*.zip
-*.gz
-*.tar
-*.tgz
-*.bz2
-*.xz
-*.7z
-*.rar
-*.zst
-*.lz4
-*.lzh
-*.cab
-*.arj
-*.rpm
-*.deb
-*.Z
-*.lz
-*.lzo
+# WordPress specific
+wp-content/cache/
+*.sql
 ```
