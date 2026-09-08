@@ -631,6 +631,7 @@ function luxe_inject_console_button() {
 add_action( 'wp_footer', 'luxe_inject_console_button', 20 );
 
 
+require get_template_directory() . '/inc/functions-bridge.php';
 require get_template_directory() . '/inc/cpt.php';
 require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/customizer.php';
