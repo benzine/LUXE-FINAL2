@@ -1,207 +1,214 @@
 {
-  "version": 5,
-  "exportedAt": "2026-09-08T00:00:00.000Z",
-  "config": {
-    "design": {
-      "palette": {
-        "rose": "#D4A5A5",
-        "roseDeep": "#A67B7B",
-        "gold": "#C9B037",
-        "sage": "#A8B5A0",
-        "accent": "#C9B037"
-      },
-      "presets": [
-        { "name": "Day Salon", "fontFamily": "Cormorant Garamond", "overrides": { "warmth": 10, "contrast": 1.0 } },
-        { "name": "Evening Glamour", "fontFamily": "Playfair Display", "overrides": { "warmth": 25, "contrast": 1.2 } },
-        { "name": "Sage Atelier", "fontFamily": "Fraunces", "overrides": { "warmth": -5, "greenTint": 10 } },
-        { "name": "Copper House", "fontFamily": "Cormorant Garamond", "overrides": { "warmth": 30, "copperTint": 15 } },
-        { "name": "Platinum", "fontFamily": "Playfair Display", "overrides": { "warmth": -15, "silverTint": 10 } }
+  "design": {
+    "palette": {
+      "rose": "#D4A5A5",
+      "roseDeep": "#A67B7B",
+      "gold": "#C9B037",
+      "sage": "#A8B5A0",
+      "accent": "#C9B037",
+      "charcoal": "#2C2C2C",
+      "cream": "#FDFBF7"
+    },
+    "typography": {
+      "heading": "Playfair Display",
+      "body": "Lato",
+      "size": 16
+    },
+    "presets": [
+      { "name": "Day Salon", "font": "Cormorant Garamond", "warmth": 10 },
+      { "name": "Evening Glamour", "font": "Playfair Display", "warmth": 25 },
+      { "name": "Sage Atelier", "font": "Fraunces", "warmth": -5 },
+      { "name": "Copper House", "font": "Cormorant Garamond", "warmth": 30 },
+      { "name": "Platinum", "font": "Playfair Display", "warmth": -15 }
+    ]
+  },
+  "salon": {
+    "name": "Luxe Hair Studio",
+    "word": "LUXE",
+    "sub": "Hair Studio",
+    "address": "12 Rosewater Lane",
+    "city": "Mayfair, London W1K",
+    "phone": "+44 20 7946 0958",
+    "email": "hello@luxehairstudio.co.uk",
+    "copyright": "Crafted strand by strand — a flagship salon experience."
+  },
+  "headings": {
+    "services": { "title": "Craft, priced", "italic": "with honesty.", "desc": "Three tiers — Junior, Senior, Master — one uncompromising ritual." },
+    "transformations": { "title": "Drag the parting,", "italic": "meet the after.", "desc": "Real clients, real chairs, no retouching." },
+    "stylists": { "title": "Hands you can", "italic": "trust blindly.", "desc": "Three philosophies, one standard." },
+    "consultation": { "title": "Your hair, read", "italic": "like a novel.", "desc": "Five questions, three complete looks." },
+    "mirror": { "title": "Step up to", "italic": "the mirror.", "desc": "Pick a muse, pour a shade — on-device, private, instant." },
+    "booking": { "title": "Your appointment,", "italic": "four small steps.", "desc": "Live availability, honest durations." },
+    "experience": { "title": "You'll remember", "italic": "how it felt.", "desc": "Linen-warm light, good scissors, our signature scent." }
+  },
+  "stages": [
+    { "id": "01", "kicker": "The Natural", "line1": "Every masterpiece", "line2": "begins au naturel.", "sub": "Real hair, honest light, no filters. This is where we start.", "image": "/wp-content/themes/luxe-hair-studio/images/img-0-_result.png", "accent": "#c9b037" },
+    { "id": "02", "kicker": "The Colour", "line1": "Colour, painted", "line2": "like liquid light.", "sub": "Hand-drawn balayage that grows out as beautifully as it grows in.", "image": "/wp-content/themes/luxe-hair-studio/images/img-7-_result.png", "accent": "#e0b2b2" },
+    { "id": "03", "kicker": "The Reveal", "line1": "And then —", "line2": "the reveal.", "sub": "Champagne waves, the final turn, the moment you see yourself anew.", "image": "/wp-content/themes/luxe-hair-studio/images/img-1-_result.png", "accent": "#f5e6d3" },
+    { "id": "04", "kicker": "The Atelier", "line1": "For the days", "line2": "that matter most.", "sub": "Bridal artistry for the walk down the aisle and beyond.", "image": "/wp-content/themes/luxe-hair-studio/images/img-6-_result.png", "accent": "#a8b5a0" }
+  ],
+  "hero": {
+    "rotationSpeed": 6000,
+    "fadeDuration": 1200,
+    "persistentCTA": true,
+    "ctaText": "Book Your Transformation",
+    "ctaLink": "#booking"
+  },
+  "services": [
+    { "category": "Cut & Styling", "items": [ { "name": "Signature Cut & Finish", "duration": "75min", "price": "£110" }, { "name": "Restyle & Reinvent", "duration": "105min", "price": "£145" }, { "name": "Blowout & Waves", "duration": "60min", "price": "£78" } ] },
+    { "category": "Colour & Highlights", "items": [ { "name": "Full Balayage", "duration": "180min", "price": "£240" }, { "name": "Global Colour", "duration": "105min", "price": "£145" }, { "name": "Colour Correction", "duration": "240min", "price": "£340" } ] },
+    { "category": "Treatments & Rituals", "items": [ { "name": "Bond Repair Therapy", "duration": "45min", "price": "£70" }, { "name": "Scalp Detox Ritual", "duration": "50min", "price": "£72" } ] },
+    { "category": "Bridal & Events", "items": [ { "name": "Bridal Trial", "duration": "90min", "price": "£120" }, { "name": "Wedding-Day Styling", "duration": "120min", "price": "£230" } ] }
+  ],
+  "stylists": [
+    { "name": "Amara Okafor", "role": "Master Stylist · Texture", "specialty": "Textured & coily hair", "traits": "Warm attentive quietly brilliant", "quote": "Your curls have a memory. I just help them remember.", "image": "/wp-content/themes/luxe-hair-studio/images/img-3-_result.png" },
+    { "name": "Sofia Reyes", "role": "Colour Director", "specialty": "Balayage & colour correction", "traits": "Bold creative endlessly curious", "quote": "Colour is light you get to keep.", "image": "/wp-content/themes/luxe-hair-studio/images/img-4-_result.png" },
+    { "name": "Elena Marchetti", "role": "Founder · Editorial", "specialty": "Editorial styling & bridal", "traits": "Precise calming quietly opinionated", "quote": "A haircut should argue with no one and flatter everyone.", "image": "/wp-content/themes/luxe-hair-studio/images/img-5-_result.png" }
+  ],
+  "packages": [
+    { "name": "The Full Makeover", "tag": "Most booked", "description": "Restyle, balayage, bond repair, gloss, champagne", "duration": "4h 30m", "price": "£380" },
+    { "name": "Bridal Suite", "tag": "For the big day", "description": "Trial, wedding-day hair+makeup, bridesmaid discount", "duration": "Trial + day-of", "price": "£495" },
+    { "name": "Colour Reset", "tag": "The rescue", "description": "Correction consultation, strand tests, correction, 2 gloss visits", "duration": "Two visits", "price": "£460" }
+  ],
+  "gallery": [
+    { "title": "Rosewater Balayage", "type": "colour", "stylist": "Sofia", "quote": "She painted sunlight into my strands." },
+    { "title": "Bridal Chignon", "type": "bridal", "stylist": "Elena", "quote": "Flawless from ceremony to last dance." },
+    { "title": "Champagne Reveal", "type": "colour", "stylist": "Sofia", "quote": "I didn't know my hair could look this expensive." },
+    { "title": "Natural Study", "type": "cut", "stylist": "Amara", "quote": "Finally, a cut that understands my texture." }
+  ],
+  "testimonials": [
+    { "client": "Charlotte H.", "service": "Full Balayage", "rating": 5, "quote": "I've never felt more understood by a stylist. The colour is living art." },
+    { "client": "Priya S.", "service": "Restyle", "rating": 5, "quote": "Ten years of damage gone in one afternoon. I finally recognise myself again." },
+    { "client": "Megan & Tom", "service": "Bridal Suite", "rating": 5, "quote": "Elena made me feel like the most beautiful version of myself on our day." }
+  ],
+  "products": [
+    { "name": "Silk No. 9 Shampoo", "price": "£34", "description": "A weightless cleanse that leaves hair feeling like spun silk. Infused with jasmine and argan." },
+    { "name": "Cloud Rinse Conditioner", "price": "£36", "description": "Detangles without heaviness. Your hair will float, not fall." },
+    { "name": "Liquid Shine Serum", "price": "£42", "description": "Three drops transform frizz into mirror-like gloss. Our best-kept secret." }
+  ],
+  "images": {
+    "heroBefore": "/wp-content/themes/luxe-hair-studio/images/img-0-_result.png",
+    "heroAfter": "/wp-content/themes/luxe-hair-studio/images/img-1-_result.png",
+    "salon": "/wp-content/themes/luxe-hair-studio/images/img-2-_result.png",
+    "amara": "/wp-content/themes/luxe-hair-studio/images/img-3-_result.png",
+    "sofia": "/wp-content/themes/luxe-hair-studio/images/img-4-_result.png",
+    "elena": "/wp-content/themes/luxe-hair-studio/images/img-5-_result.png",
+    "bride": "/wp-content/themes/luxe-hair-studio/images/img-6-_result.png",
+    "color": "/wp-content/themes/luxe-hair-studio/images/img-7-_result.png"
+  },
+  "amenities": [
+    { "name": "Coffee & tea cart", "desc": "Artisan blends served warm, just as you prefer." },
+    { "name": "Fresh flowers weekly", "desc": "Seasonal stems that fill the air with subtle fragrance." },
+    { "name": "Head massage rituals", "desc": "Five minutes of pressure-point relief at the basin." },
+    { "name": "Quiet alcove chairs", "desc": "Private corners for those who prefer silence over chatter." }
+  ],
+  "scents": [
+    { "name": "Lavender", "effect": "Calming" },
+    { "name": "Jasmine", "effect": "Uplifting" },
+    { "name": "Warm vanilla", "effect": "Comforting" },
+    { "name": "Bergamot", "effect": "Energizing" },
+    { "name": "Fresh linen", "effect": "Clean" }
+  ],
+  "marqueeWords": [ "Precision Cuts", "Balayage & Colour", "Bridal Artistry", "Scalp Rituals", "Editorial Styling", "Liquid Shine", "The Quiet Luxury" ],
+  "stats": [
+    { "value": "12+", "label": "Years of craft" },
+    { "value": "8k+", "label": "Happy clients" },
+    { "value": "15", "label": "Awards won" },
+    { "value": "100%", "label": "Dedication" }
+  ],
+  "quizQuestions": [
+    { "id": "texture", "question": "What is your natural hair texture?", "options": [ { "value": "Fine", "matches": { "Amara": 0.6, "Sofia": 0.7, "Elena": 0.8 } }, { "value": "Medium", "matches": { "Amara": 0.8, "Sofia": 0.8, "Elena": 0.7 } }, { "value": "Coarse-Coily", "matches": { "Amara": 1.0, "Sofia": 0.5, "Elena": 0.4 } } ] },
+    { "id": "goal", "question": "What is your primary hair goal?", "options": [ { "value": "Low maintenance", "matches": { "Amara": 0.7, "Sofia": 0.6, "Elena": 0.9 } }, { "value": "Bold change", "matches": { "Amara": 0.5, "Sofia": 1.0, "Elena": 0.6 } }, { "value": "Special event", "matches": { "Amara": 0.6, "Sofia": 0.7, "Elena": 1.0 } } ] }
+  ],
+  "bookingAddons": [
+    { "name": "Express scalp treatment", "price": "£25" },
+    { "name": "Bond repair booster", "price": "£35" },
+    { "name": "Take-home styling kit", "price": "£45" },
+    { "name": "Champagne upgrade", "price": "£55" }
+  ],
+  "tiers": [
+    { "level": "Junior", "cut": "£85", "colour": "£180" },
+    { "level": "Senior", "cut": "£110", "colour": "£240" },
+    { "level": "Master", "cut": "£140", "colour": "£310" }
+  ],
+  "slots": [ "services", "transformations", "stylists", "consultation", "mirror", "booking", "experience", "amenities", "marquee", "stats", "quiz", "tiers", "booking-addons" ],
+  "mirror": {
+    "models": [
+      { "name": "Muse · Natural", "image": "/wp-content/themes/luxe-hair-studio/images/img-0-_result.png", "hex": "#6b4f3a" },
+      { "name": "Muse · Waves", "image": "/wp-content/themes/luxe-hair-studio/images/img-1-_result.png", "hex": "#c98d6b" },
+      { "name": "Muse · Colour", "image": "/wp-content/themes/luxe-hair-studio/images/img-7-_result.png", "hex": "#b47462" }
+    ],
+    "shades": [
+      { "name": "Natural", "hsl": { "h": 28, "s": 38, "l": 42 } },
+      { "name": "Champagne", "hsl": { "h": 40, "s": 52, "l": 66 } },
+      { "name": "Rosewater", "hsl": { "h": 8, "s": 45, "l": 62 } },
+      { "name": "Warm Copper", "hsl": { "h": 18, "s": 62, "l": 48 } },
+      { "name": "Glacier Blonde", "hsl": { "h": 48, "s": 24, "l": 78 } },
+      { "name": "Espresso Gloss", "hsl": { "h": 22, "s": 30, "l": 22 } },
+      { "name": "Cool Platinum", "hsl": { "h": 220, "s": 10, "l": 82 } }
+    ],
+    "tolerance": 38,
+    "protectSkin": true,
+    "warmth": 40,
+    "shine": 45
+  },
+  "labels": {
+    "nav.services": "Services",
+    "nav.transformations": "Transformations",
+    "nav.stylists": "Stylists",
+    "nav.booking": "Book Now",
+    "nav.shop": "Apothecary",
+    "hero.cta": "Book Your Transformation",
+    "hero.sub": "Mayfair's quiet luxury hair atelier",
+    "eyebrow.new": "New",
+    "eyebrow.popular": "Popular",
+    "packages.view": "View Packages",
+    "apothecary.shop": "Shop Apothecary",
+    "booking.title": "Reserve Your Chair",
+    "booking.step1": "Select Service",
+    "booking.step2": "Choose Stylist",
+    "booking.step3": "Pick Date",
+    "booking.step4": "Confirm",
+    "gallery.view": "View Gallery",
+    "mirror.try": "Try On",
+    "consult.start": "Start Consultation",
+    "dock.home": "Home",
+    "dock.mirror": "Mirror",
+    "dock.book": "Book",
+    "dock.theme": "Theme",
+    "concierge.hello": "Hello, how may we assist?",
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms of Service",
+    "footer.contact": "Contact",
+    "console.title": "Atelier Console",
+    "search.placeholder": "Search services, stylists...",
+    "mega.services": "Our Services",
+    "mega.team": "The Team",
+    "mega.experience": "The Experience"
+  },
+  "navigation": {
+    "showSearch": true,
+    "showDarkMode": false,
+    "megaMenu": {
+      "enabled": true,
+      "columns": [
+        { "title": "Services", "links": [ { "label": "Cut & Styling", "url": "#services" }, { "label": "Colour", "url": "#services" }, { "label": "Treatments", "url": "#services" } ] },
+        { "title": "Team", "links": [ { "label": "Amara", "url": "#stylists" }, { "label": "Sofia", "url": "#stylists" }, { "label": "Elena", "url": "#stylists" } ] },
+        { "title": "Experience", "links": [ { "label": "Amenities", "url": "#experience" }, { "label": "Products", "url": "#shop" }, { "label": "Journal", "url": "#blog" } ] }
       ]
-    },
-    "stages": [
-      { "id": "01", "kicker": "The Natural", "line1": "Every masterpiece", "line2": "begins au naturel.", "sub": "Real hair, honest light, no filters. This is where we start.", "image": "/wp-content/themes/luxe-hair-studio/images/img-0-_result.png", "accent": "#c9b037" },
-      { "id": "02", "kicker": "The Colour", "line1": "Colour, painted", "line2": "like liquid light.", "sub": "Hand-drawn balayage that grows out as beautifully as it grows in.", "image": "/wp-content/themes/luxe-hair-studio/images/img-7-_result.png", "accent": "#e0b2b2" },
-      { "id": "03", "kicker": "The Reveal", "line1": "And then —", "line2": "the reveal.", "sub": "Champagne waves, the final turn, the moment you see yourself anew.", "image": "/wp-content/themes/luxe-hair-studio/images/img-1-_result.png", "accent": "#f5e6d3" },
-      { "id": "04", "kicker": "The Atelier", "line1": "For the days", "line2": "that matter most.", "sub": "Bridal artistry for the walk down the aisle and beyond.", "image": "/wp-content/themes/luxe-hair-studio/images/img-6-_result.png", "accent": "#a8b5a0" }
-    ],
-    "services": [
-      { "category": "Cut & Styling", "items": [
-        { "name": "Signature Cut & Finish", "duration": "75min", "price": "£110" },
-        { "name": "Restyle & Reinvent", "duration": "105min", "price": "£145" },
-        { "name": "Blowout & Waves", "duration": "60min", "price": "£78" }
-      ]},
-      { "category": "Colour & Highlights", "items": [
-        { "name": "Full Balayage", "duration": "180min", "price": "£240" },
-        { "name": "Global Colour", "duration": "105min", "price": "£145" },
-        { "name": "Colour Correction", "duration": "240min", "price": "£340" }
-      ]},
-      { "category": "Treatments & Rituals", "items": [
-        { "name": "Bond Repair Therapy", "duration": "45min", "price": "£70" },
-        { "name": "Scalp Detox Ritual", "duration": "50min", "price": "£72" }
-      ]},
-      { "category": "Bridal & Events", "items": [
-        { "name": "Bridal Trial", "duration": "90min", "price": "£120" },
-        { "name": "Wedding-Day Styling", "duration": "120min", "price": "£230" }
-      ]}
-    ],
-    "stylists": [
-      { "name": "Amara Okafor", "role": "Master Stylist · Texture", "specialty": "Textured & coily hair", "traits": "Warm attentive quietly brilliant", "quote": "Your curls have a memory. I just help them remember.", "image": "/wp-content/themes/luxe-hair-studio/images/img-3-_result.png" },
-      { "name": "Sofia Reyes", "role": "Colour Director", "specialty": "Balayage & colour correction", "traits": "Bold creative endlessly curious", "quote": "Colour is light you get to keep.", "image": "/wp-content/themes/luxe-hair-studio/images/img-4-_result.png" },
-      { "name": "Elena Marchetti", "role": "Founder · Editorial", "specialty": "Editorial styling & bridal", "traits": "Precise calming quietly opinionated", "quote": "A haircut should argue with no one and flatter everyone.", "image": "/wp-content/themes/luxe-hair-studio/images/img-5-_result.png" }
-    ],
-    "packages": [
-      { "name": "The Full Makeover", "tag": "Most booked", "description": "Restyle, balayage, bond repair, gloss, champagne", "duration": "4h 30m", "price": "£380" },
-      { "name": "Bridal Suite", "tag": "For the big day", "description": "Trial, wedding-day hair+makeup, bridesmaid discount", "duration": "Trial + day-of", "price": "£495" },
-      { "name": "Colour Reset", "tag": "The rescue", "description": "Correction consultation, strand tests, correction, 2 gloss visits", "duration": "Two visits", "price": "£460" }
-    ],
-    "gallery": [
-      { "title": "Rosewater Balayage", "type": "colour", "stylist": "Sofia", "quote": "She painted sunlight into my strands." },
-      { "title": "Bridal Chignon", "type": "bridal", "stylist": "Elena", "quote": "Flawless from ceremony to last dance." },
-      { "title": "Champagne Reveal", "type": "colour", "stylist": "Sofia", "quote": "I didn't know my hair could look this expensive." },
-      { "title": "Natural Study", "type": "cut", "stylist": "Amara", "quote": "Finally, a cut that understands my texture." }
-    ],
-    "testimonials": [
-      { "client": "Charlotte H.", "service": "Full Balayage", "rating": 5, "quote": "I've never felt more understood by a stylist. The colour is living art." },
-      { "client": "Priya S.", "service": "Restyle", "rating": 5, "quote": "Ten years of damage gone in one afternoon. I finally recognise myself again." },
-      { "client": "Megan & Tom", "service": "Bridal Suite", "rating": 5, "quote": "Elena made me feel like the most beautiful version of myself on our day." }
-    ],
-    "products": [
-      { "name": "Silk No. 9 Shampoo", "price": "£34", "description": "A weightless cleanse that leaves hair feeling like spun silk. Infused with jasmine and argan." },
-      { "name": "Cloud Rinse Conditioner", "price": "£36", "description": "Detangles without heaviness. Your hair will float, not fall." },
-      { "name": "Liquid Shine Serum", "price": "£42", "description": "Three drops transform frizz into mirror-like gloss. Our best-kept secret." }
-    ],
-    "headings": {
-      "services": { "title": "Craft, priced", "italic": "with honesty.", "desc": "Three tiers — Junior, Senior, Master — one uncompromising ritual." },
-      "transformations": { "title": "Drag the parting,", "italic": "meet the after.", "desc": "Real clients, real chairs, no retouching." },
-      "stylists": { "title": "Hands you can", "italic": "trust blindly.", "desc": "Three philosophies, one standard." },
-      "consultation": { "title": "Your hair, read", "italic": "like a novel.", "desc": "Five questions, three complete looks." },
-      "mirror": { "title": "Step up to", "italic": "the mirror.", "desc": "Pick a muse, pour a shade — on-device, private, instant." },
-      "booking": { "title": "Your appointment,", "italic": "four small steps.", "desc": "Live availability, honest durations." },
-      "experience": { "title": "You'll remember", "italic": "how it felt.", "desc": "Linen-warm light, good scissors, our signature scent." }
-    },
-    "slots": ["services", "transformations", "stylists", "consultation", "mirror", "booking", "experience", "amenities", "marquee", "stats", "quiz", "tiers", "booking-addons"],
-    "mirror": {
-      "models": [
-        { "name": "Muse · Natural", "image": "/wp-content/themes/luxe-hair-studio/images/img-0-_result.png", "hex": "#6b4f3a" },
-        { "name": "Muse · Waves", "image": "/wp-content/themes/luxe-hair-studio/images/img-1-_result.png", "hex": "#c98d6b" },
-        { "name": "Muse · Colour", "image": "/wp-content/themes/luxe-hair-studio/images/img-7-_result.png", "hex": "#b47462" }
-      ],
-      "shades": [
-        { "name": "Natural", "hsl": { "h": 28, "s": 38, "l": 42 } },
-        { "name": "Champagne", "hsl": { "h": 40, "s": 52, "l": 66 } },
-        { "name": "Rosewater", "hsl": { "h": 8, "s": 45, "l": 62 } },
-        { "name": "Warm Copper", "hsl": { "h": 18, "s": 62, "l": 48 } },
-        { "name": "Glacier Blonde", "hsl": { "h": 48, "s": 24, "l": 78 } },
-        { "name": "Espresso Gloss", "hsl": { "h": 22, "s": 30, "l": 22 } },
-        { "name": "Cool Platinum", "hsl": { "h": 220, "s": 10, "l": 82 } }
-      ],
-      "tolerance": 38,
-      "protectSkin": true,
-      "warmth": 40,
-      "shine": 45
-    },
-    "salon": {
-      "name": "Luxe Hair Studio",
-      "word": "LUXE",
-      "sub": "Hair Studio",
-      "address": "12 Rosewater Lane",
-      "city": "Mayfair, London W1K",
-      "phone": "+44 20 7946 0958",
-      "email": "hello@luxehairstudio.co.uk",
-      "copyright": "Crafted strand by strand — a flagship salon experience."
-    },
-    "labels": {
-      "nav.services": "Services",
-      "nav.transformations": "Transformations",
-      "nav.stylists": "Stylists",
-      "nav.booking": "Book Now",
-      "nav.shop": "Apothecary",
-      "hero.cta": "Begin Your Ritual",
-      "hero.sub": "Mayfair's quiet luxury hair atelier",
-      "eyebrow.new": "New",
-      "eyebrow.popular": "Popular",
-      "packages.view": "View Packages",
-      "apothecary.shop": "Shop Apothecary",
-      "booking.title": "Reserve Your Chair",
-      "booking.step1": "Select Service",
-      "booking.step2": "Choose Stylist",
-      "booking.step3": "Pick Date",
-      "booking.step4": "Confirm",
-      "gallery.view": "View Gallery",
-      "mirror.try": "Try On",
-      "consult.start": "Start Consultation",
-      "dock.home": "Home",
-      "dock.mirror": "Mirror",
-      "dock.book": "Book",
-      "concierge.hello": "Hello, how may we assist?",
-      "footer.privacy": "Privacy Policy",
-      "footer.terms": "Terms of Service",
-      "footer.contact": "Contact",
-      "console.title": "Luxe Console"
-    },
-    "images": {
-      "heroBefore": "/wp-content/themes/luxe-hair-studio/images/img-0-_result.png",
-      "heroAfter": "/wp-content/themes/luxe-hair-studio/images/img-1-_result.png",
-      "salon": "/wp-content/themes/luxe-hair-studio/images/img-2-_result.png",
-      "amara": "/wp-content/themes/luxe-hair-studio/images/img-3-_result.png",
-      "sofia": "/wp-content/themes/luxe-hair-studio/images/img-4-_result.png",
-      "elena": "/wp-content/themes/luxe-hair-studio/images/img-5-_result.png",
-      "bride": "/wp-content/themes/luxe-hair-studio/images/img-6-_result.png",
-      "color": "/wp-content/themes/luxe-hair-studio/images/img-7-_result.png"
-    },
-    "amenities": [
-      { "name": "Coffee & tea cart", "desc": "Artisan blends served warm, just as you prefer." },
-      { "name": "Fresh flowers weekly", "desc": "Seasonal stems that fill the air with subtle fragrance." },
-      { "name": "Head massage rituals", "desc": "Five minutes of pressure-point relief at the basin." },
-      { "name": "Quiet alcove chairs", "desc": "Private corners for those who prefer silence over chatter." }
-    ],
-    "scents": [
-      { "name": "Lavender", "effect": "Calming" },
-      { "name": "Jasmine", "effect": "Uplifting" },
-      { "name": "Warm vanilla", "effect": "Comforting" },
-      { "name": "Bergamot", "effect": "Energizing" },
-      { "name": "Fresh linen", "effect": "Clean" }
-    ],
-    "marqueeWords": ["Precision Cuts", "Balayage & Colour", "Bridal Artistry", "Scalp Rituals", "Editorial Styling", "Liquid Shine", "The Quiet Luxury"],
-    "stats": {
-      "items": [
-        { "value": "12+", "label": "Years of craft" },
-        { "value": "8k+", "label": "Happy clients" },
-        { "value": "15", "label": "Awards won" },
-        { "value": "100%", "label": "Dedication" }
-      ],
-      "style": {
-        "background": "transparent",
-        "backgroundImage": "",
-        "cardBackground": "rgba(255, 255, 255, 0.6)",
-        "cardBorder": "1px solid rgba(212, 165, 165, 0.3)",
-        "cardShadow": "0 2px 8px rgba(0, 0, 0, 0.04)",
-        "numberColor": "#A67B7B",
-        "labelColor": "#6b5b5b"
-      }
-    },
-    "quizQuestions": [
-      { "id": "texture", "question": "What is your natural hair texture?", "options": [
-        { "value": "Fine", "matches": { "Amara": 0.6, "Sofia": 0.7, "Elena": 0.8 } },
-        { "value": "Medium", "matches": { "Amara": 0.8, "Sofia": 0.8, "Elena": 0.7 } },
-        { "value": "Coarse-Coily", "matches": { "Amara": 1.0, "Sofia": 0.5, "Elena": 0.4 } }
-      ]},
-      { "id": "goal", "question": "What is your primary hair goal?", "options": [
-        { "value": "Low maintenance", "matches": { "Amara": 0.7, "Sofia": 0.6, "Elena": 0.9 } },
-        { "value": "Bold change", "matches": { "Amara": 0.5, "Sofia": 1.0, "Elena": 0.6 } },
-        { "value": "Special event", "matches": { "Amara": 0.6, "Sofia": 0.7, "Elena": 1.0 } }
-      ]}
-    ],
-    "bookingAddons": [
-      { "name": "Express scalp treatment", "price": "£25" },
-      { "name": "Bond repair booster", "price": "£35" },
-      { "name": "Take-home styling kit", "price": "£45" },
-      { "name": "Champagne upgrade", "price": "£55" }
-    ],
-    "tiers": [
-      { "level": "Junior", "cut": "£85", "colour": "£180" },
-      { "level": "Senior", "cut": "£110", "colour": "£240" },
-      { "level": "Master", "cut": "£140", "colour": "£310" }
+    }
+  },
+  "chatbot": {
+    "enabled": true,
+    "autoClose": false,
+    "name": "Vivienne",
+    "knowledge": [
+      { "keywords": ["book", "appointment", "reserve"], "response": "You can book your transformation directly via the 'Book Now' button or select a service below." },
+      { "keywords": ["price", "cost", "how much"], "response": "Our cuts start at £85, colour at £180. Full packages are available from £380." },
+      { "keywords": ["location", "address", "where"], "response": "We are located at 12 Rosewater Lane, Mayfair, London W1K." },
+      { "keywords": ["hours", "open", "time"], "response": "We are open Tuesday to Saturday, 9am to 7pm." },
+      { "keywords": ["stylist", "who", "team"], "response": "Our team includes Amara (Texture), Sofia (Colour), and Elena (Editorial & Bridal)." },
+      { "keywords": ["parking", "transport"], "response": "We are a 2-minute walk from Bond Street Station. Valet parking is available." }
     ]
   }
 }
