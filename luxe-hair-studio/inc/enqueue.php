@@ -54,7 +54,8 @@ function luxe_enqueue_app() {
 	);
 	
 	/* Inject the FULL merged configuration as inline script so React reads it immediately.
-	   This ensures window.__LUXE_CONFIG__ is available before any module loads. */
+	   This ensures window.__LUXE_CONFIG__ is available before any module loads.
+	   Runs on both frontend AND admin (Atelier Console). */
 	if ( ! function_exists( 'luxe_merged_config' ) ) {
 		require_once get_template_directory() . '/functions.php';
 	}
@@ -63,6 +64,7 @@ function luxe_enqueue_app() {
 	wp_add_inline_script( 'luxe-app', 'window.__LUXE_CONFIG__ = ' . $config_json . ';', 'before' );
 }
 add_action( 'wp_enqueue_scripts', 'luxe_enqueue_app' );
+add_action( 'admin_enqueue_scripts', 'luxe_enqueue_app' );
 
 /** Force type="module" on the main app script tag.
  * The Vite build uses ES module syntax throughout (import/export) and
