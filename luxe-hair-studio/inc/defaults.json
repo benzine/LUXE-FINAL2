@@ -160,12 +160,23 @@
     { "name": "Fresh linen", "effect": "Clean" }
   ],
   "marqueeWords": ["Precision Cuts", "Balayage & Colour", "Bridal Artistry", "Scalp Rituals", "Editorial Styling", "Liquid Shine", "The Quiet Luxury"],
-  "stats": [
-    { "value": "12+", "label": "Years of craft" },
-    { "value": "8k+", "label": "Happy clients" },
-    { "value": "15", "label": "Awards won" },
-    { "value": "100%", "label": "Dedication" }
-  ],
+  "stats": {
+    "items": [
+      { "value": "12+", "label": "Years of craft" },
+      { "value": "8k+", "label": "Happy clients" },
+      { "value": "15", "label": "Awards won" },
+      { "value": "100%", "label": "Dedication" }
+    ],
+    "style": {
+      "background": "transparent",
+      "backgroundImage": "",
+      "cardBackground": "rgba(255, 255, 255, 0.6)",
+      "cardBorder": "1px solid rgba(212, 165, 165, 0.3)",
+      "cardShadow": "0 2px 8px rgba(0, 0, 0, 0.04)",
+      "numberColor": "#A67B7B",
+      "labelColor": "#6b5b5b"
+    }
+  },
   "quizQuestions": [
     { "id": "texture", "question": "What is your natural hair texture?", "options": [
       { "value": "Fine", "matches": { "Amara": 0.6, "Sofia": 0.7, "Elena": 0.8 } },
