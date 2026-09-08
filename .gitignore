@@ -1,42 +1,9 @@
 ```
-# Environment variables
-.env
-.env.local
-*.env.*
+# Build artifacts
+assets/css/theme-updates.css
+assets/js/app-logic.js
 
-# Logs
-*.log
-
-# Coverage reports
-coverage/
-htmlcov/
-.coverage
-
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.Python
-*.so
-*.egg-info/
-.eggs/
-
-# Virtual environments
-venv/
-.venv/
-env/
-ENV/
-
-# Testing
-.pytest_cache/
-.mypy_cache/
-.tox/
-
-# Distribution / packaging
-dist/
-build/
-*.egg
-*.egg-info/
-MANIFEST
+# Config files
+inc/defaults.json
+luxe-config.json
 ```
